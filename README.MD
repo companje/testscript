@@ -1,1 +1,4 @@
-﻿http://gargoyle-router.com/old-openwrt-coding.html
+- clone this repo into your package/ or customfeeds/ folder
+- `make V=s -j1 package/testscript/prepare` # copies files from customfeeds/ to build_dir
+- `./scripts/feeds update customfeeds`
+- `./scripts/feeds install testscript` # works?

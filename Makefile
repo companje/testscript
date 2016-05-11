@@ -72,14 +72,14 @@ endef
 
 # We do not need to define Build/Configure or Build/Compile directives
 # The defaults are appropriate for compiling a simple program such as this one
-define Build/Compile
-	@echo "Build/Compile"
-	$(MAKE) -C $(PKG_BUILD_DIR)/src \
-			$(TARGET_CONFIGURE_OPTS) \
-			prefix="$(PKG_INSTALL_DIR)/usr"
-	$(CP) $(PKG_BUILD_DIR)/src/testscript $(PKG_INSTALL_DIR)/usr/bin
-	touch $@
-endef
+# define Build/Compile
+# 	@echo "Build/Compile"
+# 	$(MAKE) -C $(PKG_BUILD_DIR) \
+# 			$(TARGET_CONFIGURE_OPTS) \
+# 			prefix="$(PKG_INSTALL_DIR)/usr"
+# 	$(CP) $(PKG_BUILD_DIR)/testscript $(PKG_INSTALL_DIR)/usr/bin
+# 	touch $@
+# endef
 
 # Specify where and how to install the program. Since we only have one file, 
 # the testscript executable, install it by copying it to the /bin directory on
